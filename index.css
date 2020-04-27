@@ -1,0 +1,122 @@
+:root{
+    --angle: 135deg;
+    --bar-color:#c92828;
+    --default-bar-color:#233eff;
+
+    --bg-gradient-1:#ddfcfa;
+    --bg-gradient-2:#05ada3;
+    --bg-gradient-3:#4798c9;
+}
+body{
+    background: linear-gradient(223deg, var(--bg-gradient-1),var(--bg-gradient-2),var(--bg-gradient-3));
+    background-size: 600% 600%;
+
+    animation: backgroundAnimation 22s ease infinite;
+}
+
+.temperature{
+    color: #eee;
+    position: absolute;
+    margin-top: 21%;
+    font-size: 20px;
+    text-shadow: 2px 2px 3px black;
+}
+#min{
+    margin-left: 32%;
+}
+#max{
+    margin-left: 61%;
+}
+#mid{
+    margin-left: 46%;
+    margin-top: 7%;
+}
+#current{
+    margin-left: 46%;
+    margin-top: 12%;
+    color: var(--bar-color);
+}
+#clothes{
+    position: absolute;
+    margin-left: 41.4%;
+    margin-top: 16%;
+    background-color: rgba(238, 238, 238, 0.76);
+    width: 200px; height: 200px;
+    border-radius: 50%; 
+}
+#clothes:hover{
+    box-shadow: 2px 10px 25px -3px rgba(0,0,0,0.4);
+}
+#clothes:active{
+
+    margin-top: 16.2%;
+}
+
+#image{
+    
+    position: relative;
+    margin-left: 25%;
+    margin-top: 23%;
+    width: 100px;
+    height: 100px;
+}
+
+.progress{
+    position: relative;
+
+    margin-left: 35%;
+    margin-top: 10%;
+    float:left;
+    text-align: center;
+}
+
+.bg{
+    position: relative;
+   border-radius: 50%;
+    width: 400px; height: 400px; 
+    margin-bottom: -14px; 
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(255,255,255,0.2) 100%);
+}
+
+.hiddenProgress{
+    position: relative;
+    overflow: hidden; 
+    width: 400px; height: 200px; 
+    margin-bottom: -14px; 
+}
+
+.progressLine{
+    position: absolute;
+    top: 100; left: 100;
+    width: 400px; height: 400px; 
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 10px solid #eee;    
+    border-bottom-color: var(--default-bar-color);  
+    border-right-color: var(--default-bar-color);
+
+    transform: rotate(45deg);
+    }
+
+.rotatingObject{
+    animation:spin 2s ease-out ;
+    animation-fill-mode:forwards;
+}
+
+
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(var(--angle)); 
+        transform:rotate(var(--angle)); 
+        border-bottom-color: var(--bar-color);
+        border-right-color: var(--bar-color);
+}}
+
+@keyframes backgroundAnimation {
+    0%{background-position:0% 54%}
+    50%{background-position:100% 47%}
+    100%{background-position:0% 54%}
+}
+
+    

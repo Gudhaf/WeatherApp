@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script defer src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <title>Weather</title>
+        <link rel="icon" href="https://icons-for-free.com/iconfiles/png/512/forecast+sun+weather+icon-1320184881471073011.png">
+    
+    <body>
+        <div class="temperature" id="mid">
+            <p>15 C</p>
+        </div>
+        <div class="temperature" id="min">
+            <p>-5 C</p>
+        </div>
+        <div class="temperature" id="max">
+            <p>35 C</p>
+        </div>
+        <div class="progress">
+            <div class="bg">
+                <div class="hiddenProgress">
+                    <div class="progressLine" id="bar">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="clothes" onclick="getLocation()"></div>
+        <div class="temperature" id="current"></div>     
+    </body>
+
+    
+</html>
